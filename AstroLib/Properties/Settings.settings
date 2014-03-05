@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Isis.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SaguaroLibraryFilename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ObjectLibrary\SAC\SAC_DeepSky_Ver81_QCQ.TXT</Value>
+    </Setting>
+    <Setting Name="DescriptionLookupFilename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ObjectLibrary\Description\description lookups.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

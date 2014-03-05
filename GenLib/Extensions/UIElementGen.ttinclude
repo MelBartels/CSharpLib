@@ -1,0 +1,113 @@
+﻿<#+
+
+  //Generate the Event wrappers to create an observable from
+  //an event
+
+ //Generate a GetEventName wrapper method for events in this type
+ void GenerateEventGetters(Type type)
+   {
+       
+       var events = type.GetEvents();
+
+       foreach (var e in events)
+       {
+           Type tDelegate = e.EventHandlerType;
+           var parameters=GetDelegateParameterTypes(tDelegate);
+            
+             if (parameters.Length==2 
+                       && typeof(EventArgs).IsAssignableFrom(parameters[1]))
+           {
+
+    #>
+                    
+        public static IObservable<IEvent<<#=parameters[1].Name#>>> Get<#=e.Name#> (this <#=type.Name#> el)
+        {
+            return Observable.FromEvent<<#=GetCorrectTypeName(tDelegate)#>, <#=parameters[1].Name#>>
+                (   
+                    h => new <#=GetCorrectTypeName(tDelegate)#>(h), 
+                    h => el.<#=e.Name#> += h, 
+                    h => el.<#=e.Name#> -= h
+                );
+        }
+    <#+
+            }
+       }
+   }
+
+    //Get the parameter types for delegates
+   private Type[] GetDelegateParameterTypes(Type d)
+   {
+       if (d.BaseType != typeof(MulticastDelegate))
+           throw new ApplicationException("Not a delegate.");
+
+       MethodInfo invoke = d.GetMethod("Invoke");
+       if (invoke == null)
+           throw new ApplicationException("Not a delegate.");
+
+       ParameterInfo[] parameters = invoke.GetParameters();
+       Type[] typeParameters = new Type[parameters.Length];
+       for (int i = 0; i < parameters.Length; i++)
+       {
+           typeParameters[i] = parameters[i].ParameterType;
+       }
+       return typeParameters;
+   }
+
+    //Get the delegate return type
+   private Type GetDelegateReturnType(Type d)
+   {
+       if (d.BaseType != typeof(MulticastDelegate))
+           throw new ApplicationException("Not a delegate.");
+
+       MethodInfo invoke = d.GetMethod("Invoke");
+       if (invoke == null)
+           throw new ApplicationException("Not a delegate.");
+
+       return invoke.ReturnType;
+   }
+        
+    // Fixes up a Generic Type name so that it displays properly for output.
+    public static string GetCorrectTypeName(Type genericType)
+        {
+
+            var fullTypeName=false;
+            if (!genericType.IsGenericType) return genericType.Name;
+
+            //Make sure the type is indeed generic in which case the` is in the name
+            int index = genericType.Name.IndexOf("`");
+            if (index == -1)
+            {
+                if (!fullTypeName)
+                    return genericType.Name;
+
+                return genericType.Namespace + "." + genericType.Name;
+            }
+
+            // Strip off the Generic postfix
+            string TypeName = genericType.Name.Substring(0, index);
+            string formatted = TypeName;
+
+            //Parse the generic type arguments
+            Type[] genericArgs = genericType.GetGenericArguments();
+            string genericOutput = "<";
+            bool Start = true;
+            foreach (Type arg in genericArgs)
+            {
+                if (Start)
+                {
+                    genericOutput += arg.Name;
+                    Start = false;
+                }
+                else
+                    genericOutput += "," + arg.Name;
+            }
+
+            genericOutput += ">";
+            formatted += genericOutput;
+
+            if (!fullTypeName)
+                return formatted;
+            return genericType.Namespace + "." + formatted;
+        }
+
+#>

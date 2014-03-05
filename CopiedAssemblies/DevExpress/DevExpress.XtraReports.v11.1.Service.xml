@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.XtraReports.v11.1.Service</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.RootReportParameterContainer">
+
+            <summary>
+                <para>For internal use. Contains information about the report's parameters and sub-reports.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.RootReportParameterContainer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RootReportParameterContainer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.RootReportParameterContainer.ShouldRequestParameters">
+            <summary>
+                <para>For internal use. Defines whether or not parameters are requested when a report is being previewed under the Silverlight platform.
+</para>
+            </summary>
+            <value>A Boolean value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.PrintId">
+
+            <summary>
+                <para>Identifies the printed document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.PrintId.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PrintId class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.PrintId.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the PrintId class with the specified value.
+</para>
+            </summary>
+            <param name="value">
+		A <see cref="T:System.String"/> value, specifying the document's ID. This value is assigned to the <see cref="P:DevExpress.XtraReports.Service.DataContracts.PrintId.Value"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.PrintId.Value">
+            <summary>
+                <para>Specifies the printed document's ID.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, identifying the document.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.DocumentData">
+
+            <summary>
+                <para>For internal use. Contains information about the document.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.DocumentData.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DocumentData class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.DocumentData.AvailableExportModes">
+            <summary>
+                <para>For internal use. Specifies the available document export modes.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.DocumentData.DocumentMap">
+            <summary>
+                <para>For internal use. Specifies the document map.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.DocumentData.ExportOptions">
+            <summary>
+                <para>For internal use. Specifies the document export options.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.DocumentData.HiddenOptions">
+            <summary>
+                <para>For internal use. Specifies the document's hidden options.
+
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.DocumentData.Name">
+            <summary>
+                <para>For internal use. Specifies the document name.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.DocumentData.SerializedPageData">
+            <summary>
+                <para>For internal use. Specifies the serialized page data.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.PrintStatus">
+
+            <summary>
+                <para>Contains the information related to the current status of a printed document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.PrintStatus.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PrintStatus class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.PrintStatus.Fault">
+            <summary>
+                <para>Specifies information about the service fault that occurred while printing the document. 
+
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.ServiceFault"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.PrintStatus.PrintId">
+            <summary>
+                <para>Specifies the ID of the printed document.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the document.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.PrintStatus.ProgressPosition">
+            <summary>
+                <para>Specifies the progress position of the current task (as percentage).
+</para>
+            </summary>
+            <value>An integer value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.PrintStatus.Status">
+            <summary>
+                <para>Specifies information about the current service task status.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.TaskStatus"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.BuildStatus">
+
+            <summary>
+                <para>Represents a structure which stores the information about a document's build status.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.BuildStatus.Document">
+            <summary>
+                <para>Specifies the document.
+
+</para>
+            </summary>
+            <value>A DevExpress.Xpf.Printing.ServiceReference.DocumentId object identifying the document.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.BuildStatus.Fault">
+            <summary>
+                <para>Specifies the service fault.
+</para>
+            </summary>
+            <value>A DevExpress.Xpf.Printing.ServiceReference.ServiceFault object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.BuildStatus.PageCount">
+            <summary>
+                <para>Specifies the current number of pages in the created document.
+</para>
+            </summary>
+            <value>An integer value, specifying the number of pages.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.BuildStatus.ProgressPosition">
+            <summary>
+                <para>Specifies the current progress of the document creation.
+</para>
+            </summary>
+            <value>An integer value, specifying the progress position, in percents.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.BuildStatus.Status">
+            <summary>
+                <para>Specifies the task status.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.TaskStatus"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.IReportService">
+
+            <summary>
+                <para>If implemented by a class, maintains WCF service and provides the printing and exporting functionality.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.GetBuildStatus(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>When implemented by a class, gets the current status of the document being created.
+
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the document.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.BuildStatus"/> structure.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.GetDocumentData(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>When implemented by a class, gets information about the specified document. 
+
+
+
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.DocumentData"/> object that contains information about the document.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.GetPage(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId,System.Int32)">
+            <summary>
+                <para>When implemented by a class, gets the XAML code of the specified document page. 
+
+
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <param name="pageIndex">
+		An integer value, specifying the page index.
+
+            </param>
+            <returns>A <see cref="T:System.String"/> value containing the document's XAML.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.GetPrintDocument(DevExpress.XtraReports.Service.DataContracts.PrintId)">
+            <summary>
+                <para>When implemented by a class, obtains the document which is being printed.
+
+
+
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the printed document. 
+
+            </param>
+            <returns>A <see cref="T:System.IO.Stream"/> value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.GetPrintStatus(DevExpress.XtraReports.Service.DataContracts.PrintId)">
+            <summary>
+                <para>When implemented by a class, gets the current status of the document, which is being printed.
+
+
+
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object that identifies the printed document. 
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintStatus"/> object that contains the information related to the current status of a printed document.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.GetReportInformation(System.String)">
+            <summary>
+                <para>When implemented by a class, gets the information about the report's parameters and sub-reports.
+</para>
+            </summary>
+            <param name="reportName">
+		A <see cref="T:System.String"/> value, specifying the report type name.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.RootReportParameterContainer"/> object, containing the information about the report's parameters and sub-reports.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.StartBuild(System.String,DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer,System.Byte[])">
+            <summary>
+                <para>When implemented by a class, starts building the document. 
+
+
+
+</para>
+            </summary>
+            <param name="reportName">
+		A <see cref="T:System.String"/> value, specifying the report type name.
+
+            </param>
+            <param name="reportInformation">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer"/> object.
+
+            </param>
+            <param name="serializedPageData">
+		An array of the document page data.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> value, identifying the document.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.StartPrint(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>When implemented by a class, starts printing the document. 
+
+
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the printed document. 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.StopBuild(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>When implemented by a class, stops building the document. 
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.IReportService.StopPrint(DevExpress.XtraReports.Service.DataContracts.PrintId)">
+            <summary>
+                <para>When implemented by a class, stops printing the document. 
+
+
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the printed document. 
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.GenericReportParameterContainer">
+
+            <summary>
+                <para>For internal use. Stores all generic report parameters.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.GenericReportParameterContainer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GenericReportParameterContainer class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.GenericReportParameterContainer.SubReportName">
+            <summary>
+                <para>Specifies the name of the sub-report. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the sub-report name.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer">
+
+            <summary>
+                <para>For internal use. Stores the tree of all report parameter roots.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RootGenericReportParameterContainer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer.Parameters">
+            <summary>
+                <para>For internal use. Defines the report parameters, including the parameters that are defined for its sub-reports.
+</para>
+            </summary>
+            <value>A dictionary that contains the report parameter entries.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer.Subreports">
+            <summary>
+                <para>For internal use. Specifies the sub-reports defined for the master report.
+</para>
+            </summary>
+            <value>A list of the <see cref="T:DevExpress.XtraReports.Service.DataContracts.GenericReportParameterContainer"/> objects.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Service.ReportService">
+
+            <summary>
+                <para>Maintains WCF service and provides the printing functionality.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ReportService class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.GetBuildStatus(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>Gets the current status of the document being created.
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the document.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.BuildStatus"/> structure.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.GetDocumentData(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>Gets information about the specified document. 
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.DocumentData"/> object that contains information about the document.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.GetPage(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId,System.Int32)">
+            <summary>
+                <para>Gets the XAML code of the specified document page. 
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <param name="pageIndex">
+		An integer value, specifying the page index.
+
+            </param>
+            <returns>A <see cref="T:System.String"/> value containing the document's XAML.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.GetPrintDocument(DevExpress.XtraReports.Service.DataContracts.PrintId)">
+            <summary>
+                <para>Obtains the document which is being printed.
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the printed document. 
+
+
+            </param>
+            <returns>A <see cref="T:System.IO.Stream"/> value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.GetPrintStatus(DevExpress.XtraReports.Service.DataContracts.PrintId)">
+            <summary>
+                <para>Gets the current status of the document, which is being printed.
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object that identifies the printed document. 
+
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintStatus"/> object that contains the information related to the current status of a printed document.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.GetReportInformation(System.String)">
+            <summary>
+                <para>Gets the information about the report's parameters and sub-reports.
+</para>
+            </summary>
+            <param name="reportName">
+		A <see cref="T:System.String"/> value, specifying the report type name.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.RootReportParameterContainer"/> object, containing the information about the report's parameters and sub-reports.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.StartBuild(System.String,DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer,System.Byte[])">
+            <summary>
+                <para>Starts building the document. 
+</para>
+            </summary>
+            <param name="reportName">
+		A <see cref="T:System.String"/> value, specifying the report type name.
+
+            </param>
+            <param name="reportInformation">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.RootGenericReportParameterContainer"/> object.
+
+            </param>
+            <param name="serializedPageData">
+		An array of the document page data.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> value, identifying the document.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.StartPrint(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>Starts printing the document. 
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the printed document. 
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.StopBuild(DevExpress.Xpf.Printing.Service.DataContracts.DocumentId)">
+            <summary>
+                <para>Stops building the document. 
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.Xpf.Printing.Service.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Service.ReportService.StopPrint(DevExpress.XtraReports.Service.DataContracts.PrintId)">
+            <summary>
+                <para>Stops printing the document. 
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.XtraReports.Service.DataContracts.PrintId"/> object, identifying the printed document. 
+
+
+            </param>
+
+
+        </member>
+    </members>
+</doc>

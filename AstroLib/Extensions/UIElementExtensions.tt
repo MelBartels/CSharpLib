@@ -1,0 +1,68 @@
+﻿<# /*
+adding template:
+add new item | general, text template | name file 
+delete *.txt file that's generated 
+copy tt contents 
+alter tt contents:
+	change C#v3.5 to C#
+	remove inherits line
+	remove unneeded dlls
+	remove unneeded usings
+	replace UIElement with System.Windows.Forms.Control
+	to add non-GAC assemblies: ..Assembly Name="$(SolutionDir)MyProjectX\obj\Debug\MyNonGAC.dll"..
+
+adding text file:
+add new item | general, text | name file to filename indicated in tt file
+copy ttinclude contents (C# code)
+
+saving the tt file regenerates the tt.cs file, which is inspected for errors
+inspect errors and modify tt and txt file as necessary (eg, 'Event' had to be changed to 'IEvent'), using System.ComponentModel had to be added
+*/ #>
+
+<#@ template language="C#" debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Windows.Forms.dll" #>
+<#@ Assembly Name="DevExpress.XtraGrid.v10.2" #>
+<#@ Assembly Name="DevExpress.XtraEditors.v10.2" #>
+<#@ Assembly Name="DevExpress.Data.v10.2" #>
+<#@ Assembly Name="DevExpress.Utils.v10.2" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Windows" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="DevExpress.XtraGrid.Views.Base" #>
+<#@include file="UIElementGen.ttinclude" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using System.ComponentModel;
+using DevExpress.Data;
+using DevExpress.Utils;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid.Views.Printing;
+
+namespace Isis.Extensions
+{
+	public static class <#=typeof(DevExpress.XtraGrid.GridControl).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(DevExpress.XtraGrid.GridControl)); #>
+}
+
+public static class <#=typeof(DevExpress.XtraGrid.Views.Grid.GridView).Name#>Extensions 
+	{
+		<# 	GenerateEventGetters(typeof(DevExpress.XtraGrid.Views.Grid.GridView)); #>
+}
+
+public static class <#=typeof(DevExpress.Utils.ToolTipController).Name#>Extensions 
+	{
+		<# 	GenerateEventGetters(typeof(DevExpress.Utils.ToolTipController)); #>
+}
+}

@@ -1,0 +1,179 @@
+Ab, about
+alm, almost
+am, among
+and, and
+app, appended
+appendages, appendages
+att, attached
+averted, averted
+b, brighter
+B, bright
+be, between
+bet, between
+bf, brightest towards the following side
+biN, binuclear
+black, black
+bn, brightest towards the north side
+bp, brightest towards the preceding side
+branch, branch
+brightest, brightest
+brightness, brightness
+brings, brings
+brtnb, bright nebulae
+bs, brightest towards the south side
+c, considerably
+C, compressed
+center, center
+centre, centre
+CGH, Cape of Good Hope
+ch, chevelure
+circular, circular
+cl, cluster
+Cl, cluster
+close, close
+cloud, cloud
+co, coarse/coarsely
+com, cometic
+comp, companion
+cont, in contact
+counted, counted 
+curved, curved
+d, diameter
+D, double
+dark, dark
+dbl, double
+def, defined
+deg, degree
+degrees, degrees
+dif, diffused
+diffic, difficult
+difficult, difficult
+dim, dim
+dist, distance or distant
+double, double
+e, extremely/excessively
+E, elongated/extended
+edge, edge
+ee, most extremely
+end, end
+er, easily resolvable
+exc, eccentric
+extends, extends
+f, following
+F, faint
+fainter, fainter
+foll, following
+following, following
+fuzzy, fuzzy
+g, gradually
+GC, Globular Cluster
+glow, glow
+gr, group
+green, green
+grey, grey
+group, group
+held, held
+i, irregular
+iF, irregular figure
+in, in
+inline, inline
+inner, inner
+inv, involved/involving
+invl, involved/involving
+l, little/long
+L, large
+little, little
+low, low
+many, many
+m, much
+M, middle
+mag, magnitude
+mags, magnitude
+mm, mixed magnitudes
+mn, milky nebulosity
+mottled, mottled
+much, much
+n, north
+N, Nucleus or to a Nucleus
+nearly, nearly
+neb, nebula
+nebulous, nebulous
+neby, nebula
+nf, north following
+NGC, NGC
+night, night
+no, no
+not, not
+np, north preceding
+nr, near
+of, of
+or, or
+out, out
+p, preceding
+P, poor
+parts, parts
+pB, pretty bright
+pF, pretty faint
+pL, pretty large
+planetary, planetary
+pS, pretty small
+pg, pretty gradually
+pm, pretty much
+ps, pretty suddenly
+quad, quadrilateral
+quar, quartile
+r, resolvable (mottled not resolved)
+R, round
+regions, regions
+resolvable, resolvable
+rows, rows
+rr, partially resolved some stars seen
+RR, exactly round
+rrr, well resolved clearly consisting of stars
+Ri, rich
+s, suddenly/south
+S, small
+sc, scattered
+scattered, scattered
+sf, south following
+sev, several
+several, several
+sh, shaped
+sm, smaller
+sp, south preceding
+st, stars
+st 9, stars from the 9th magnitude downwards
+st 9 13, stars from the 9th to 13th magnitude
+stars, stars
+steady, steady
+stell, stellar
+stellar, stellar
+surf, surface
+susp, suspected
+SW, southwest
+trap, trapezium
+triN, tri-nuclear
+v, very
+var, variable
+very, very
+vf, very faint
+vision, vision
+vv, very very
+11m, 11th magnitude
+8..., 8th mag and fainter
+9...13, 9th to 13th magnitude
+1st, first
+2nd, second
+3rd, third
+*, stars
+**, double star
+***, triple star
+!, remarkable object
+!!, extremely/very remarkable object
+!!!, a magnificent or otherwise interesting object
+', arcminutes
+'', arcseconds
+(?*), star?
+-, -
+(, (
+), )

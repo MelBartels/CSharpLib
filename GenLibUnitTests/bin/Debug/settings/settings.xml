@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SettingsBag xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SettingContainers>
+    <SettingContainer>
+      <Id>testId</Id>
+      <SettingType>GenLibUnitTests.Config.TestSetting</SettingType>
+      <Setting xsi:type="TestSetting">
+        <Name>testId</Name>
+        <IntValue>0</IntValue>
+        <BoolValue>false</BoolValue>
+      </Setting>
+    </SettingContainer>
+    <SettingContainer>
+      <Id>testId2</Id>
+      <SettingType>GenLibUnitTests.Config.TestSetting</SettingType>
+      <Setting xsi:type="TestSetting">
+        <Name>testId2</Name>
+        <IntValue>0</IntValue>
+        <BoolValue>false</BoolValue>
+      </Setting>
+    </SettingContainer>
+  </SettingContainers>
+</SettingsBag>

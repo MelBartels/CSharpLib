@@ -1,0 +1,71 @@
+﻿<# /*
+adding template:
+add new item | general, text template | name file 
+delete *.txt file that's generated 
+copy tt contents 
+alter tt contents:
+	change C#v3.5 to C#
+	remove inherits line
+	remove unneeded dlls
+	remove unneeded usings
+	replace UIElement with System.Windows.Forms.Control
+	to add non-GAC assemblies: ..Assembly Name="$(SolutionDir)MyProjectX\obj\Debug\MyNonGAC.dll"..
+
+adding text file:
+add new item | general, text | name file to filename indicated in tt file
+copy ttinclude contents (C# code)
+
+saving the tt file regenerates the tt.cs file, which is inspected for errors
+inspect errors and modify tt and txt file as necessary (eg, 'Event' had to be changed to 'IEvent'), using System.ComponentModel had to be added
+*/ #>
+
+<#@ template language="C#" debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Windows.Forms.dll" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Windows" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@include file="UIElementGen.ttinclude" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using System.ComponentModel;
+
+namespace GenLib.Extensions
+{
+	public static class <#=typeof(System.Windows.Forms.Form).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(System.Windows.Forms.Form)); #>
+}
+
+	public static class <#=typeof(System.Windows.Forms.Control).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(System.Windows.Forms.Control)); #>
+}
+
+	public static class <#=typeof(System.Windows.Forms.UserControl).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(System.Windows.Forms.UserControl)); #>
+}
+
+	public static class <#=typeof(System.Windows.Forms.Button).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(System.Windows.Forms.Button)); #>
+}
+
+	public static class <#=typeof(System.Windows.Forms.ToolStripMenuItem).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(System.Windows.Forms.ToolStripMenuItem)); #>
+}
+
+	public static class <#=typeof(System.Windows.Forms.PictureBox).Name#>Extensions 
+	{
+	<# GenerateEventGetters(typeof(System.Windows.Forms.PictureBox)); #>
+}
+}

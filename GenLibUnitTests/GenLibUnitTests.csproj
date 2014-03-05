@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BC6D3C0-F384-40E5-8881-3F0E26660354}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenLibUnitTests</RootNamespace>
+    <AssemblyName>GenLibUnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CopiedAssemblies\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.CoreEx, Version=1.0.2838.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\CopiedAssemblies\Rx\System.CoreEx.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive, Version=1.0.2838.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\CopiedAssemblies\Rx\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit, Version=1.7.0.1540, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CopiedAssemblies\xunit.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.extensions">
+      <HintPath>..\CopiedAssemblies\xunit.extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitByte\RomanNumeralConverter.cs" />
+    <Compile Include="Config\Setting.cs" />
+    <Compile Include="Config\SettingsService.cs" />
+    <Compile Include="Config\TestSetting.cs" />
+    <Compile Include="BitByte\BytesUtil.cs" />
+    <Compile Include="Email\Gmail.cs" />
+    <Compile Include="Examples\FizzBuzz.cs" />
+    <Compile Include="Examples\MVVM\Messaging\Auxiliary\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examples\MVVM\Messaging\Auxiliary\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MVVM\Messaging\Auxiliary\ViewModel.cs" />
+    <Compile Include="Examples\MVVM\Messaging\Main\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examples\MVVM\Messaging\Main\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MVVM\Messaging\Main\ViewModel.cs" />
+    <Compile Include="Examples\MVVM\Messaging\Test.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="BitByte\Crypto.cs" />
+    <Compile Include="BitByte\Encoder.cs" />
+    <Compile Include="Helper\EMath.cs" />
+    <Compile Include="Examples\Delegates\MethodGroupExamplesTest.cs" />
+    <Compile Include="Extension\EnumerableExtensions.cs" />
+    <Compile Include="Extension\EnumExtension.cs" />
+    <Compile Include="Extension\DebugExtension.cs" />
+    <Compile Include="Extension\EventInvokeExtensions.cs" />
+    <Compile Include="Extension\ExtensionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extension\ExtensionsForm.Designer.cs">
+      <DependentUpon>ExtensionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\StringExtension.cs" />
+    <Compile Include="Extension\SupportClasses.cs" />
+    <Compile Include="Extension\TupleExtension.cs" />
+    <Compile Include="Extension\FunctionalExtension.cs" />
+    <Compile Include="Graphics\Flicker.cs" />
+    <Compile Include="Graphics\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphics\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress\Manual.cs" />
+    <Compile Include="Progress\BackgroundWorker.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reactive\Async.cs" />
+    <Compile Include="Reactive\FormDemo\Extensions.cs" />
+    <Compile Include="Reactive\FormDemo\Reactive.cs" />
+    <Compile Include="Reactive\FormDemo\ReactiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reactive\FormDemo\ReactiveForm.Designer.cs">
+      <DependentUpon>ReactiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reactive\Messaging\Message.cs" />
+    <Compile Include="Reactive\MouseDemo\MoveMinimize\Tests.cs" />
+    <Compile Include="Reactive\MouseDemo\MoveMinimize\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reactive\MouseDemo\MoveMinimize\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reactive\MouseDemo\Ext\Tests.cs" />
+    <Compile Include="Reactive\MouseDemo\Ext\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reactive\MouseDemo\Ext\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reactive\MouseDemo\Initial\Extensions.cs" />
+    <Compile Include="Reactive\MouseDemo\Initial\Tests.cs" />
+    <Compile Include="Reactive\MouseDemo\Initial\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reactive\MouseDemo\Initial\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reactive\PropertyChanged.cs" />
+    <Compile Include="Helper\Scratch.cs" />
+    <Compile Include="Observer\LoggingObserver.cs" />
+    <Compile Include="Observer\Observing.cs" />
+    <Compile Include="Examples\Delegates\Delegates.cs" />
+    <Compile Include="Helper\SerializeXml.cs" />
+    <Compile Include="Services\DirectoryFile.cs" />
+    <Compile Include="Examples\CreationExamples.cs" />
+    <Compile Include="Examples\Delegates\DelegateAndLambdaExamples.cs" />
+    <Compile Include="Settings\UserCtrlTestSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UserCtrlTestSetting.Designer.cs">
+      <DependentUpon>UserCtrlTestSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SFT\Z_RunLast_SFTInherited.cs" />
+    <Compile Include="SFT\SFTInheritedTestObject.cs" />
+    <Compile Include="ExceptionService\ExceptionService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SFT\ISFTFactory.cs" />
+    <Compile Include="SFT\SFTSecond.cs" />
+    <Compile Include="SFT\SFTSecondTestObject.cs" />
+    <Compile Include="SFT\SFTSingleItem.cs" />
+    <Compile Include="SFT\SFTSingleItemTestObject.cs" />
+    <Compile Include="SFT\SFTTag.cs" />
+    <Compile Include="SFT\SFTTagTestObject.cs" />
+    <Compile Include="SFT\SFTTestObject.cs" />
+    <Compile Include="SFT\SFT.cs" />
+    <Compile Include="Startup\AboutScreen.cs" />
+    <Compile Include="Startup\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\Startup.cs" />
+    <Compile Include="Helper\StringTokenizer.cs" />
+    <Compile Include="Services\LogService.cs" />
+    <Compile Include="Extension\XunitShould.cs" />
+    <Compile Include="Examples\MVVM\ViewMediator.cs" />
+    <Compile Include="View\WaitCursor\WaitCursor.cs" />
+    <Compile Include="View\WaitCursor\WaitCursorTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WaitCursor\WaitCursorTestForm.Designer.cs">
+      <DependentUpon>WaitCursorTestForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Release\serializeXmlTestObjects.xml" />
+    <Content Include="bin\Release\shellexecute.txt" />
+    <Content Include="TestFiles\serializeXmlTestObjects.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\shellexecute.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\TestAboutScreen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MVVM\Messaging\Auxiliary\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\MVVM\Messaging\Main\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extension\ExtensionsForm.resx">
+      <DependentUpon>ExtensionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphics\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reactive\FormDemo\ReactiveForm.resx">
+      <DependentUpon>ReactiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reactive\MouseDemo\MoveMinimize\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reactive\MouseDemo\Ext\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reactive\MouseDemo\Initial\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UserCtrlTestSetting.resx">
+      <DependentUpon>UserCtrlTestSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WaitCursor\WaitCursorTestForm.resx">
+      <DependentUpon>WaitCursorTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenLib\GenLib.csproj">
+      <Project>{2b871d56-01cc-493f-a0fb-ffb4799d0fea}</Project>
+      <Name>GenLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

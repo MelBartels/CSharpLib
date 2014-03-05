@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B871D56-01CC-493F-A0FB-FFB4799D0FEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenLib</RootNamespace>
+    <AssemblyName>GenLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CopiedAssemblies\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.CoreEx, Version=1.0.2838.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\CopiedAssemblies\Rx\System.CoreEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive, Version=1.0.2838.104, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\CopiedAssemblies\Rx\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitByte\RomanNumeralConverter.cs" />
+    <Compile Include="ClassTemplates.cs" />
+    <Compile Include="Email\Gmail.cs" />
+    <Compile Include="Extensions\ControlExtension.cs" />
+    <Compile Include="Extensions\PropertyExtension.cs" />
+    <Compile Include="Messaging\CopyTextMessage.cs" />
+    <Compile Include="Messaging\IMessage.cs" />
+    <Compile Include="Messaging\IMessenger.cs" />
+    <Compile Include="Messaging\MessageToken.cs" />
+    <Compile Include="Messaging\Messenger.cs" />
+    <Compile Include="Progress\BackgroundWorker\Mediator.cs" />
+    <Compile Include="Progress\Manual\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\Manual\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\StartupModule.cs" />
+    <Compile Include="View\StringEventArgs.cs" />
+    <Compile Include="Extensions\UIElementExtensions.cs">
+      <DependentUpon>UIElementExtensions.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="View\ErrorProviderHelper.cs" />
+    <Compile Include="Extensions\EventExtensions.cs" />
+    <Compile Include="Extensions\InvokeExtensions.cs" />
+    <Compile Include="Extensions\ReactiveExtension.cs" />
+    <Compile Include="Graphics\IRenderer.cs" />
+    <Compile Include="Graphics\IUserCtrlGraphics.cs" />
+    <Compile Include="Graphics\UserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Graphics\UserCtrl.Designer.cs">
+      <DependentUpon>UserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\AppMessageBox.cs" />
+    <Compile Include="BitByte\BytesUtil.cs" />
+    <Compile Include="Config\ISetting.cs" />
+    <Compile Include="Config\PreLoadConfig.cs" />
+    <Compile Include="Config\SettingContainer.cs" />
+    <Compile Include="Config\SettingBase.cs" />
+    <Compile Include="Config\SettingsBag.cs" />
+    <Compile Include="Config\SettingsService.cs" />
+    <Compile Include="Constants\General.cs" />
+    <Compile Include="BitByte\Crypto.cs" />
+    <Compile Include="Services\DirectoryFile.cs" />
+    <Compile Include="Helper\EMath.cs" />
+    <Compile Include="BitByte\Encoder.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="ExceptionService\ExceptionHandlerMessageBox.cs" />
+    <Compile Include="ExceptionService\ExceptionHandlerBase.cs" />
+    <Compile Include="ExceptionService\ExceptionMsg.cs" />
+    <Compile Include="ExceptionService\ExceptionHandlerLog.cs" />
+    <Compile Include="ExceptionService\IExceptionHandler.cs" />
+    <Compile Include="Extensions\DebugExtension.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\TupleExtension.cs" />
+    <Compile Include="Extensions\FunctionalExtension.cs" />
+    <Compile Include="Observer\LoggingObserver.cs" />
+    <Compile Include="Services\LogToFile.cs" />
+    <Compile Include="Observer\ObserverEventArgs.cs" />
+    <Compile Include="Observer\Observers.cs" />
+    <Compile Include="Progress\BackgroundWorker\BackgroundWorkerEndingState.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\IViewModel.cs" />
+    <Compile Include="View\LinearGradientBrushBuilder.cs" />
+    <Compile Include="View\ResizeComponentBorderStrategy.cs" />
+    <Compile Include="View\ResizeComponentProportionalStrategy.cs" />
+    <Compile Include="Messaging\StringMessage.cs" />
+    <Compile Include="View\ViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\BackgroundWorker\ViewModel.cs" />
+    <Compile Include="Progress\BackgroundWorker\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\BackgroundWorker\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\SerializeXml.cs" />
+    <Compile Include="Settings\ToolTips.cs" />
+    <Compile Include="Settings\UserCtrlSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UserCtrlSettings.Designer.cs">
+      <DependentUpon>UserCtrlSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ViewSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\ViewSettings.Designer.cs">
+      <DependentUpon>ViewSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SFT\ISFT.cs" />
+    <Compile Include="SFT\ISFTFacade.cs" />
+    <Compile Include="SFT\ISFTFactory.cs" />
+    <Compile Include="SFT\SFTFacadeBase.cs" />
+    <Compile Include="SFT\SFTPrototype.cs" />
+    <Compile Include="SFT\SFTContainer.cs" />
+    <Compile Include="SFT\SFTFactoryTestObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup\ApplicationDataModel.cs" />
+    <Compile Include="Startup\AboutScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup\AboutScreen.Designer.cs">
+      <DependentUpon>AboutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\ViewModel.cs" />
+    <Compile Include="Startup\Startup.cs" />
+    <Compile Include="Helper\StringTokenizer.cs" />
+    <Compile Include="Constants\Units.cs" />
+    <Compile Include="View\PropertyComparer.cs" />
+    <Compile Include="View\SortableBindingList.cs" />
+    <Compile Include="View\Validate.cs" />
+    <Compile Include="View\Pause.cs" />
+    <Compile Include="View\ViewModelPrototype.cs" />
+    <Compile Include="View\WaitCursor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Graphics\UserCtrl.resx">
+      <DependentUpon>UserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\Manual\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\BackgroundWorker\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UserCtrlSettings.resx">
+      <DependentUpon>UserCtrlSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\ViewSettings.resx">
+      <DependentUpon>ViewSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup\AboutScreen.resx">
+      <DependentUpon>AboutScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Extensions\UIElementGen.ttinclude" />
+    <None Include="Extensions\UIElementExtensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UIElementExtensions.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

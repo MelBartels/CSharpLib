@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.PivotGrid.v11.1.Adomd</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.XtraPivotGrid.PivotGridAdomdDataSource">
+
+            <summary>
+                <para>Represents an ADOMD.NET data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPivotGrid.PivotGridAdomdDataSource.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PivotGridAdomdDataSource class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPivotGrid.PivotGridAdomdDataSource.#ctor(DevExpress.XtraPivotGrid.AdomdVersion)">
+            <summary>
+                <para>Initializes a new instance of the PivotGridAdomdDataSource class, using the specified ADOMD.NET version.
+</para>
+            </summary>
+            <param name="adomdVersion">
+		An <see cref="T:DevExpress.XtraPivotGrid.AdomdVersion"/> enumeration member specifying the ADOMD.NET version to use.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridAdomdDataSource.ConnectionString">
+            <summary>
+                <para>Specifies a connection string to a cube in an MS Analysis Services database.
+</para>
+            </summary>
+            <value>A connection string.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPivotGrid.AdomdVersion">
+
+            <summary>
+                <para>Lists values that specify the ADOMD.NET version that should be used to communicate with an OLAP server.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraPivotGrid.AdomdVersion.Version10">
+            <summary>
+                <para>ADOMD.NET 10 is used.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraPivotGrid.AdomdVersion.Version9">
+            <summary>
+                <para>ADOMD.NET 9 is used.
+</para>
+            </summary>
+
+
+        </member>
+    </members>
+</doc>

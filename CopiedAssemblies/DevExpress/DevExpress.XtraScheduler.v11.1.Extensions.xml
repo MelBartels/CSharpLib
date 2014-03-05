@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.XtraScheduler.v11.1.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.XtraScheduler.UI.ViewNavigator">
+
+            <summary>
+                <para>Represents a component used to create a View Navigator bar.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.ViewNavigator.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the ViewNavigator class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.ViewNavigator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ViewNavigator class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraScheduler.UI.RibbonViewNavigator">
+
+            <summary>
+                <para>Represents a component used to create a View Navigator ribbon page.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.RibbonViewNavigator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RibbonViewNavigator class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraScheduler.UI.ViewSelector">
+
+            <summary>
+                <para>Represents a component used to create a View Selector bar.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.ViewSelector.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ViewSelector class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.ViewSelector.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the ViewSelector class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraScheduler.UI.RibbonViewSelector">
+
+            <summary>
+                <para>Represents a component used to create a View Selector ribbon page.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.RibbonViewSelector.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the RibbonViewSelector class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.UI.RibbonViewSelector.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RibbonViewSelector class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+    </members>
+</doc>
